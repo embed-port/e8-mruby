@@ -6,31 +6,250 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/e8-mrb" prefix_auto="1" extension_auto="1" />
+			<Target title="mruby">
+				<Option output="bin/Debug/mruby" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="armelfgcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/e8-mrb" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+			<Target title="mirb">
+				<Option output="bin/Debug/mirb" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="armelfgcc" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
+			</Target>
+			<Target title="mrbc">
+				<Option output="bin/Debug/mrbc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="build/host/mrbgems/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-array-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-bin-mirb/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-bin-mruby/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-enum-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-hash-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-math/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-numeric-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-print/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-proc-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-random/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-range-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-sprintf/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-string-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-struct/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-symbol-ext/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="build/host/mrbgems/mruby-time/gem_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="include/mrbconf.h" />
+		<Unit filename="include/mruby.h" />
+		<Unit filename="include/mruby/array.h" />
+		<Unit filename="include/mruby/class.h" />
+		<Unit filename="include/mruby/compile.h" />
+		<Unit filename="include/mruby/data.h" />
+		<Unit filename="include/mruby/dump.h" />
+		<Unit filename="include/mruby/hash.h" />
+		<Unit filename="include/mruby/irep.h" />
+		<Unit filename="include/mruby/khash.h" />
+		<Unit filename="include/mruby/numeric.h" />
+		<Unit filename="include/mruby/proc.h" />
+		<Unit filename="include/mruby/range.h" />
+		<Unit filename="include/mruby/string.h" />
+		<Unit filename="include/mruby/value.h" />
+		<Unit filename="include/mruby/variable.h" />
+		<Unit filename="mrbgems/mruby-array-ext/src/array.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-bin-mirb/tools/mirb/mirb.c">
+			<Option compilerVar="CC" />
+			<Option target="mirb" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-bin-mruby/tools/mruby/mruby.c">
+			<Option compilerVar="CC" />
+			<Option target="mruby" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-eval/src/eval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-math/src/math.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-numeric-ext/src/numeric_ext.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-print/src/print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-proc-ext/src/proc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-random/src/mt19937ar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-random/src/mt19937ar.h" />
+		<Unit filename="mrbgems/mruby-random/src/random.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-random/src/random.h" />
+		<Unit filename="mrbgems/mruby-range-ext/src/range.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-sprintf/src/kernel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-sprintf/src/sprintf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-string-ext/src/string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-struct/src/struct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-symbol-ext/src/symbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrbgems/mruby-time/src/time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mrblib/mrblib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/array.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/class.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/codegen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/compar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/enum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/error.h" />
+		<Unit filename="src/etc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/gc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/kernel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/node.h" />
+		<Unit filename="src/numeric.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/opcode.h" />
+		<Unit filename="src/pool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/proc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/range.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/re.h" />
+		<Unit filename="src/state.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/symbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/value_array.h" />
+		<Unit filename="src/variable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/vm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/y.tab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools/mrbc/mrbc.c">
+			<Option compilerVar="CC" />
+			<Option target="mrbc" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

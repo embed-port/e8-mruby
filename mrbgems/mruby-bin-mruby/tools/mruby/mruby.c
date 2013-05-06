@@ -305,14 +305,3 @@ main(int argc, char **argv)
 
   return n == 0 ? EXIT_SUCCESS : EXIT_FAILURE;
 }
-#ifndef DISABLE_GEMS
-void
-mrb_init_mrbgems(mrb_state *mrb)
-{
-}
-
-void
-mrb_final_mrbgems(mrb_state *mrb)
-{
-}
-#endif

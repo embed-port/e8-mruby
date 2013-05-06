@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="mrbc" />
+	<File name="build/host/mrbgems/gem_init.c" open="1" top="0" tabpos="1">
+		<Cursor position="200" topLine="0" />
+	</File>
+	<File name="mrbgems/mruby-bin-mirb/tools/mirb/mirb.c" open="1" top="0" tabpos="4">
+		<Cursor position="8340" topLine="338" />
+	</File>
+	<File name="mrbgems/mruby-bin-mruby/tools/mruby/mruby.c" open="1" top="0" tabpos="2">
+		<Cursor position="7354" topLine="283" />
+	</File>
+	<File name="mrblib/mrblib.c" open="1" top="0" tabpos="3">
+		<Cursor position="1" topLine="0" />
+	</File>
+	<File name="tools/mrbc/mrbc.c" open="1" top="1" tabpos="5">
+		<Cursor position="5469" topLine="207" />
+	</File>
+</CodeBlocks_layout_file>
