@@ -230,11 +230,6 @@ main(int argc, char **argv)
   return EXIT_SUCCESS;
 }
 
-void
-mrb_init_mrblib(mrb_state *mrb)
-{
-}
-
 #ifndef DISABLE_GEMS
 void
 mrb_init_mrbgems(mrb_state *mrb)
