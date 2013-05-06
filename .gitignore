@@ -15,3 +15,5 @@
 cscope.out
 /bin
 /lib
+*/bin/*
+*/lib/*
